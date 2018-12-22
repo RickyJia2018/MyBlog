@@ -6,11 +6,13 @@
  * Time: 1:07 PM
  */
 namespace App\Http\Controllers;
-
+use App\Post;
 class PagesController extends Controller{
 
     public function getIndex(){
-        return view('pages.welcome');
+
+        $posts = Post::orderBy('created_at','desc')->limit(4)->get();
+        return view('pages.welcome')->withPosts($posts);
     }
 
 
@@ -26,4 +28,5 @@ class PagesController extends Controller{
 //        return view('pages.about')->with("fullname",$fullName);
         return view('pages.about')->withFullname($fullName);
     }
+
 }
