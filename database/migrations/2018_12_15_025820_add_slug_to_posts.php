@@ -19,6 +19,7 @@ class AddSlugToPosts extends Migration
 
         });
     }
+    
 
     /**
      * Reverse the migrations.
