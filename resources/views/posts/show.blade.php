@@ -15,7 +15,7 @@
             <dl class="dl-horizontal">
 
                 <label>Url:</label>
-                <p> <a href="{{ url( $post->slug) }}">{{  url($post->slug) }}</a> </p>
+                <p> <a href="{{  route('blog.single',$post->slug) }}">{{  route('blog.single',$post->slug) }}</a> </p>
 
                 <label>Create At:</label>
                 <p>{{date('M j, Y h:ia ',strtotime($post->created_at))}}</p>
