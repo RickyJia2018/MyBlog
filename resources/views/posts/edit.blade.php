@@ -11,7 +11,8 @@
         <div class="col-md-8">
             {{ Form::label('title','Title:') }}
             {{Form::text('title', null, ["class" => 'form-control input-lg'])}}
-
+            {{Form::label('slug','Sulg:',['class'=>'form-spacing-top'])}}
+            {{Form::text('slug', null, ["class" => 'form-control'])}}
             {{Form::label('body','Body:',['class'=>'form-spacing-top'])}}
             {{ Form::textarea('body',null, ['class'=>'form-control']) }}
         </div>

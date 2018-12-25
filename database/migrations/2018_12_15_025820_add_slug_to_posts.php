@@ -15,11 +15,11 @@ class AddSlugToPosts extends Migration
     {
         //
         Schema::table('posts',function ($table){
-            $table->string('slug')->unique()->after('body');
+            $table->string('slug')->unique()->after('title');
 
         });
     }
-    
+
 
     /**
      * Reverse the migrations.
