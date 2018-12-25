@@ -11,7 +11,13 @@
 |
 */
 
+//Blog
+Route::get('blog',['uses'=>'BlogController@getIndex','as'=>'blog.index']);
 Route::get('blog/{slug}',['as'=>'blog.single','uses'=>'BlogController@getSingle']);
+
+
+
+//Posts
 Route::get('about','PagesController@getAbout');
 Route::get('contact', 'PagesController@getContact');
 
