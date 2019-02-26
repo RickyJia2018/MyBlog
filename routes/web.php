@@ -25,7 +25,8 @@ Route::get('/', 'PagesController@getIndex');
 
 Route::resource('posts','PostController');
 
-
+//Categories                                        'only'
+Route::resource('categories','CategoryController',['except'=>['create']]);
 
 
 //Authentication Routes..

@@ -17,11 +17,12 @@
                 <label>Url:</label>
                 <p> <a href="{{  route('blog.single',$post->slug) }}">{{  route('blog.single',$post->slug) }}</a> </p>
 
+                <label>Category:</label>
+                <p>{{ $post->category->name }}</p>
+
                 <label>Create At:</label>
                 <p>{{date('M j, Y h:ia ',strtotime($post->created_at))}}</p>
-            </dl>
 
-           <dl class="dl-horizontal">
                 <label>Last Update:</label>
                 <p>{{date('M j, Y h:ia ',strtotime($post->updated_at))}}</p>
             </dl>
