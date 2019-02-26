@@ -16,7 +16,8 @@
                 {{ Form::label('remember',"Remember Me") }}
             <br>
                 {{ Form::submit('Login',['class'=>'btn btn-primary btn-block']) }}
-
+                {{--{{ Form::submit('Register',['href'=> url('register') ,'class'=>'btn btn-primary btn-block form-spacing-top']) }}--}}
+                <p><a href="{{url('password/reset')}}">Forgot Password</a></p>
             {!! Form::close() !!}
 
 

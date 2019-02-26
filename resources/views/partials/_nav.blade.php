@@ -34,7 +34,7 @@
                     </ul>
                 </li>
                 @else   <!-- logout -->
-
+                <a href="{{ route('register') }} "class="btn btn-default">Register</a>
                 <a href="{{ route('login') }} "class="btn btn-default">Login</a>
 
                 @endif
