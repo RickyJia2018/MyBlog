@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Post;
+use Image;
 use Illuminate\Http\Request;
 use Session;
+
 class PostController extends Controller
 {
     public function __construct()
@@ -59,6 +61,19 @@ class PostController extends Controller
         $post->slug = $request->slug;
         $post->category_id = $request->category_id;
         $post->body = $request->body;
+        //save image
+        if ($request->hasFile('featured_image')){
+            $image = $request->file('featured_image');
+            $fileName=time() . '.' .$image->getClientOriginalExtension();
+            $location = public_path('images/'.$fileName);
+            Image::make($image)->resize(800,400)->save($location);
+
+            $post->image = $fileName;
+        }else{
+            $post->image = "No image file";
+        }
+
+
         $post->save();
 
         Session::flash('success','The blog post was successfully saved!');  //put is permenit

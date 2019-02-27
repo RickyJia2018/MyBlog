@@ -4,3 +4,36 @@
 .form-spacing-top{
      margin-top: 25px;
 }
+
+.author-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+}
+.author-name{
+    float: left;
+    margin-left: 15px;
+}
+.author-name>h4{
+    margin: 5px 0px;
+}
+.author-time{
+    font-size: 11px;
+    font-style: italic;
+    color: #aaaaaa;
+}
+
+.comment{
+    margin-bottom: 45px;
+}
+.comment-content{
+    clear:both;
+    margin-left: 65px;
+}
+.comments-title{
+    margin-bottom: 45px;
+}
+.comments-title>span{
+    margin-right: 10px;
+}
