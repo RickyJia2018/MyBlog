@@ -7,7 +7,7 @@
             <div class="jumbotron">
                 <h1>Welcome to my blog!</h1>
                 <p class="lead">This is my test website built with laravel.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a></p>
+                {{--<p><a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a></p>--}}
             </div>
         </div>
     </div>
